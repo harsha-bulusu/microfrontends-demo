@@ -12,9 +12,6 @@ const devConfig = {
         }
     },
     plugins:[
-        new HtmlWebpackPlugin({
-            template: './public/index.html'
-        }),
         new ModuleFederationPlugin({
             remotes: {
                 marketing: 'marketing@http://localhost:8081/remoteEntry.js'
