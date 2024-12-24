@@ -4,7 +4,7 @@ const domain = process.env.DOMAIN_NAME
 const packageJSON = require('../package.json')
 const { merge } = require('webpack-merge')
 
-const prodConfig = {
+const productionConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js'
@@ -19,4 +19,4 @@ const prodConfig = {
     ]
 }
 
-module.exports = merge(commonConfig, prodConfig)
+module.exports = merge(commonConfig, productionConfig)
