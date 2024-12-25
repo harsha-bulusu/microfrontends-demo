@@ -13,7 +13,7 @@ const productionConfig = {
     plugins:[
         new ModuleFederationPlugin({
             remotes: {
-                marketing: `marketing@${domain}/marketing/remoteEntry.js`
+                marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`
             },
             shared: packageJSON.dependencies
         })
