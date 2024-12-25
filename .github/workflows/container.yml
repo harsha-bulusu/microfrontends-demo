@@ -25,6 +25,7 @@ jobs:
           aws-region: ap-south-1
       - run: echo "AWS_S3_BUCKET_NAME=${{ secrets.AWS_S3_BUCKET_NAME }}"
       - run: ls -la
+      - run: echo "${{ secrets.TEST }}"
       - run: aws s3 ls s3://${{ secrets.AWS_S3_BUCKET_NAME }}
       - run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
         env:
