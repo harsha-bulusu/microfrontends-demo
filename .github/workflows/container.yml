@@ -19,7 +19,7 @@ jobs:
       - run: npm install
       - run: npm run build
         env:
-          DOMAIN_NAME: $${{ secrets.DOMAIN_NAME }}
+          DOMAIN_NAME: ${{ secrets.DOMAIN_NAME }}
       - uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
