@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge')
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
 const packageJSON = require('../package.json')
 
-const prodConfig = {
+const productionConfig = {
     mode: 'production',
     output: {
         filename: '[name]:[contenthash].js',
@@ -21,4 +21,4 @@ const prodConfig = {
     ]
 }
 
-module.exports = merge(commonConfig, prodConfig)
+module.exports = merge(commonConfig, productionConfig)
