@@ -7,7 +7,8 @@ const { merge } = require('webpack-merge')
 const productionConfig = {
     mode: 'production',
     output: {
-        filename: '[name].[contenthash].js'
+        filename: '[name].[contenthash].js',
+        publicPath: '/container/latest/'
     },
     plugins:[
         new ModuleFederationPlugin({
